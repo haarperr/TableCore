@@ -1,6 +1,6 @@
 RegisterNetEvent('tb-notify:client:SendAlert')
 AddEventHandler('tb-notify:client:SendAlert', function(data)
-	SendAlert(data.type, data.text, data.length, data.style)
+	Notification(data.type, data.text, data.length, data.style)
 end)
 
 function Notification(type, text, length, style)
