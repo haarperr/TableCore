@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TB-Internet :: Laptop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="container" id="noselect">
+        <div class="laptop-ui">
+            <div class="task-bar">
+                <div class="activities">
+                    Activities
+                </div>
+                <div class="time">
+                    <span id="current-day"></span> <span id="current-time"></span>
+                </div>
+                <div class="menu" id="system-actions-trigger">
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-volume-up"></i>
+                    <i class="fas fa-battery-three-quarters"></i>
+                    <i class="fas fa-sort"></i>
+                </div>
+            </div>
+
+            
+            <!-- SYSTEM ACTIONS -->
+            <div class="system-actions">
+                <div id="close"><i class="fas fa-power-off"></i>
+                <i class="fas fa-redo" id="system-actions-icons"></i></div>
+                <i class="fas fa-times-circle" id="close-actions-menu"></i>
+            </div>
+            <!-- FIREFOX DEFAULT -->
+            <div class="firefox-browser" id="firefox-browser">
+                <div class="firefox-header" id="firefox-header">
+                    <div class="current-page">
+                        <i class="fas fa-globe-europe" style="padding:5px;color:rgb(116, 116, 116);"></i>
+                        <p class="current-page-title" style="padding:5px;">Firefox Browser</p>
+                        <i class="fas fa-times" style="padding:8px;font-size:10px;cursor:pointer;" id="close-firefox"></i>
+                    </div>
+                    <div class="firefox-buttons">
+                            <i class="fas fa-circle" id="minimalize"></i>
+                            <i class="fas fa-circle" id="bigger"></i>
+                            <i class="fas fa-circle" id="close-firefox-2"></i>
+                    </div>
+                    <div class="firefox-searchbar">
+                        <i class="fas fa-arrow-left" style="padding:5px;cursor:pointer;"></i>
+                        <i class="fas fa-arrow-right" style="padding:5px;cursor:pointer;"></i>
+                        <i class="fas fa-redo" style="padding:5px;cursor:pointer;" id="firefox-refresh"></i>
+                        <input type="text" placeholder="http://tbcore-zoekmachine.tb" class="zoekmachine">
+                        <i class="far fa-star" style="float:right;padding:6px;cursor:pointer;" id="favorites"></i>
+                        <i class="fas fa-ellipsis-v" style="float:right;padding:6px;cursor:pointer;"></i>
+                    </div>
+                    <div class="firefox-body">
+                        <div class="firefox-websites">
+                            <div class="ff-item">
+                                <img src="assets/img/firefox.png" class="ff-icons">
+                                <p>Firefox Home</p>
+                            </div>
+                            <div class="ff-item" id="hornbach-trigger">
+                                <img src="assets/img/hbbg.png" class="ff-icons">
+                                <p>Hornbach Webshop</p>
+                            </div>
+                            <div class="ff-item" id="ah-trigger">
+                                <img src="assets/img/ahlogo.png" class="ff-icons">
+                                <p>Albert Heijn</p>
+                            </div>
+                            <div class="ff-item" id="postnl-trigger">
+                                <img src="assets/img/postnllogo.png" class="ff-icons">
+                                <p>PostNL</p>
+                            </div>
+                            <div class="ff-item" id="email-trigger">
+                                <img src="assets/img/tbmail.png" class="ff-icons">
+                                <p>TB-Mail</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- HORNBACH -->
+            <div class="hornbach-browser" id="hornbach-browser">
+                <div class="firefox-header" id="firefox-header">
+                    <div class="current-page">
+                        <i class="fas fa-globe-europe" style="padding:5px;color:rgb(116, 116, 116);"></i>
+                        <p class="current-page-title" style="padding:5px;">Hornbach Online</p>
+                        <i class="fas fa-times" style="padding:8px;font-size:10px;cursor:pointer;" id="hornbach-close"></i>
+                    </div>
+                    <div class="firefox-buttons">
+                            <i class="fas fa-circle" id="minimalize"></i>
+                            <i class="fas fa-circle" id="bigger"></i>
+                            <i class="fas fa-circle" id="close-hornbach-2"></i>
+                    </div>
+                    <div class="firefox-searchbar">
+                        <i class="fas fa-arrow-left" style="padding:5px;cursor:pointer;" id="last-page"></i>
+                        <i class="fas fa-arrow-right" style="padding:5px;cursor:pointer;"></i>
+                        <i class="fas fa-redo" style="padding:5px;cursor:pointer;" id="hornbach-refresh"></i>
+                        <input type="text" placeholder="http://hornbach-online.tb" class="zoekmachine">
+                        <i class="far fa-star" style="float:right;padding:6px;cursor:pointer;" id="favorites"></i>
+                        <i class="fas fa-ellipsis-v" style="float:right;padding:6px;cursor:pointer;"></i>
+                    </div>
+                    <div class="hornbach-body">
+                        <div class="hornbach-header">
+                            <img src="assets/img/hornbachlogo.png" style="width:320px;height:53.3px;padding: 10px;">
+                        </div>
+                        <div class="hornbach-info">
+                            Hornbach bezorgd vanaf vandaag bij jou thuis of bij het postkantoor! Bestel snel het nieuwste gereedschap en haal je pakketje binnen 5 minuten op! <u id="hornbach-info-close" style="float:right;">Sluiten</u>
+                        </div>
+                        <div class="hornbach-main-wrapper">
+                            <div class="hornbach-item">
+                                <div class="hornbach-item-info">
+                                    Koevoet 1 stuk
+                                    <p>$ 500.50</p>
+                                </div>
+                                <img src="assets/img/items/crowbar.png">
+                                <div class="hornbach-item-button" id="hornbach-1-order">
+                                    Bestellen
+                                </div>
+                            </div>
+                            <div class="hornbach-item">
+                                <div class="hornbach-item-info">
+                                    Tang 1 stuk
+                                    <p>$ 200.00</p>
+                                </div>
+                                <img src="assets/img/items/pipewrench.png">
+                                <div class="hornbach-item-button" id="hornbach-2-order">
+                                    Bestellen
+                                </div>
+                            </div>
+                            <div class="hornbach-item">
+                                <div class="hornbach-item-info">
+                                    Koevoet 1 stuk
+                                    <p>$ 500,50</p>
+                                </div>
+                                <img src="assets/img/items/koevoet.png" id="hornbach-3-order">
+                                <div class="hornbach-item-button">
+                                    Bestellen
+                                </div>
+                            </div>
+                            <div class="hornbach-item">
+                                <div class="hornbach-item-info">
+                                    Koevoet 1 stuk
+                                    <p>$ 500,50</p>
+                                </div>
+                                <img src="assets/img/items/koevoet.png" id="hornbach-4-order">
+                                <div class="hornbach-item-button">
+                                    Bestellen
+                                </div>
+                            </div>
+                            <div class="hornbach-item">
+                                <div class="hornbach-item-info">
+                                    Koevoet 1 stuk
+                                    <p>$ 500,50</p>
+                                </div>
+                                <img src="assets/img/items/koevoet.png" id="hornbach-5-order">
+                                <div class="hornbach-item-button">
+                                    Bestellen
+                                </div>
+                            </div>
+                            <div class="hornbach-item">
+                                <div class="hornbach-item-info">
+                                    Koevoet 1 stuk
+                                    <p>$ 500,50</p>
+                                </div>
+                                <img src="assets/img/items/koevoet.png" id="hornbach-6-order">
+                                <div class="hornbach-item-button">
+                                    Bestellen
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ALBERT HEIJN -->
+            <div class="ah-browser" id="ah-browser">
+                    <div class="firefox-header" id="firefox-header">
+                        <div class="current-page">
+                            <i class="fas fa-globe-europe" style="padding:5px;color:rgb(116, 116, 116);"></i>
+                            <p class="current-page-title" style="padding:5px;">Albert Heijn</p>
+                            <i class="fas fa-times" style="padding:8px;font-size:10px;cursor:pointer;" id="close-ah"></i>
+                        </div>
+                        <div class="firefox-buttons">
+                                <i class="fas fa-circle" id="minimalize"></i>
+                                <i class="fas fa-circle" id="bigger"></i>
+                                <i class="fas fa-circle" id="close-ah-2"></i>
+                        </div>
+                        <div class="firefox-searchbar">
+                            <i class="fas fa-arrow-left" style="padding:5px;cursor:pointer;" id="ah-last-page"></i>
+                            <i class="fas fa-arrow-right" style="padding:5px;cursor:pointer;"></i>
+                            <i class="fas fa-redo" style="padding:5px;cursor:pointer;" id="ah-refresh"></i>
+                            <input type="text" placeholder="http://webshop.albert-heijn.tb" class="zoekmachine">
+                            <i class="far fa-star" style="float:right;padding:6px;cursor:pointer;" id="favorites"></i>
+                            <i class="fas fa-ellipsis-v" style="float:right;padding:6px;cursor:pointer;"></i>
+                        </div>
+                        <div class="ah-body">
+                            <div class="ah-main-wrapper">
+                                <div class="ah-main-header">
+                                    <img src="assets/img/ahlogo.png">
+                                </div>
+                                <div class="ah-cookies">
+                                    Welkom bij Albert Heijn! Om door te kunnen gaan moet je eerst de cookies accepteren. <u id="ah-cookies-accepted">Cookies accepteren</u>
+                                </div>
+                                <div class="ah-all-items">
+                                    <div class="ah-item">
+                                        <div class="ah-item-label">
+                                            Sandwich
+                                        </div>
+                                        <img src="../../tb-inventory/html/img/items/bread.png">
+                                        <div class="ah-item-button" id="ah-order-1">
+                                            Bestellen [1]
+                                        </div>
+                                    </div>
+                                    <div class="ah-item">
+                                            <div class="ah-item-label">
+                                                Burger
+                                            </div>
+                                            <img src="../../tb-inventory/html/img/items/burger.png">
+                                        <div class="ah-item-button" id="ah-order-2">
+                                            Bestellen [1]
+                                        </div>
+                                    </div>
+                                    <div class="ah-item">
+                                            <div class="ah-item-label">
+                                                Water
+                                            </div>
+                                            <img src="../../tb-inventory/html/img/items/water.png">
+                                        <div class="ah-item-button" id="ah-order-3">
+                                            Bestellen [1]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+                <!-- POSTNL -->
+                <div class="postnl-browser" id="postnl-browser">
+                        <div class="firefox-header" id="firefox-header">
+                            <div class="current-page">
+                                <i class="fas fa-globe-europe" style="padding:5px;color:rgb(116, 116, 116);"></i>
+                                <p class="current-page-title" style="padding:5px;">PostNL Website</p>
+                                <i class="fas fa-times" style="padding:8px;font-size:10px;cursor:pointer;" id="close-postnl"></i>
+                            </div>
+                            <div class="firefox-buttons">
+                                    <i class="fas fa-circle" id="minimalize"></i>
+                                    <i class="fas fa-circle" id="bigger"></i>
+                                    <i class="fas fa-circle" id="close-postnl-2"></i>
+                            </div>
+                            <div class="firefox-searchbar">
+                                <i class="fas fa-arrow-left" style="padding:5px;cursor:pointer;" id="postnl-last-page"></i>
+                                <i class="fas fa-arrow-right" style="padding:5px;cursor:pointer;"></i>
+                                <i class="fas fa-redo" style="padding:5px;cursor:pointer;" id="postnl-refresh"></i>
+                                <input type="text" placeholder="http://pakket.postnl.tb" class="zoekmachine">
+                                <i class="far fa-star" style="float:right;padding:6px;cursor:pointer;" id="favorites"></i>
+                                <i class="fas fa-ellipsis-v" style="float:right;padding:6px;cursor:pointer;"></i>
+                            </div>
+                            <div class="postnl-body">
+                                <div class="postnl-main-wrapper">
+                                    <div class="postnl-header">
+                                        <img src="assets/img/postnllogo.png">
+                                        <div class="postnl-main-wrapper-button">
+                                            Home
+                                        </div>
+                                        <div class="postnl-main-wrapper-button2">
+                                            Business Solutions
+                                        </div>
+                                        <div class="postnl-main-wrapper-button3">
+                                            Klanten Service
+                                        </div>
+                                        <div class="postnl-main-wrapper-button4">
+                                            Inloggen
+                                        </div>
+                                    </div>
+                                    <div class="postnl-main-content">
+                                        <p><i class="fas fa-box-open"></i> Volg je pakketje live.</p><br>
+                                        Vul hier jouw track and trace code in.
+                                        <input type="text" id="postnl-trace" placeholder="3S252350KDAE334">
+                                    </div>
+                                    <div class="postnl-main-content">
+                                        <p><i class="fas fa-map-marked-alt"></i> Zoek een postcode op.</p><br>
+                                        Voer hier het adres in van de postcode die je zoekt.
+                                        <input type="text" id="postnl-zipcode" placeholder="1234AB">
+                                    </div>
+                                    <div class="postnl-main-content2">
+                                        <p><i class="fas fa-map-marker-alt"></i> Vind jouw locatie.</p><br>
+                                        Vul je postcode in om alle PostNL kantoren te zien.
+                                        <input type="text" id="postnl-location" placeholder="1234AB">
+                                    </div>
+                                    <div class="postnl-image-box">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+                    <!-- EMAIL -->
+                    <div class="email-browser" id="email-browser">
+                        <div class="firefox-header" id="firefox-header">
+                            <div class="current-page">
+                                <i class="fas fa-globe-europe" style="padding:5px;color:rgb(116, 116, 116);"></i>
+                                <p class="current-page-title" style="padding:5px;">TBMail :: Inbox</p>
+                                <i class="fas fa-times" style="padding:8px;font-size:10px;cursor:pointer;" id="close-email"></i>
+                            </div>
+                            <div class="firefox-buttons">
+                                    <i class="fas fa-circle" id="minimalize"></i>
+                                    <i class="fas fa-circle" id="bigger"></i>
+                                    <i class="fas fa-circle" id="close-email-2"></i>
+                            </div>
+                            <div class="firefox-searchbar">
+                                <i class="fas fa-arrow-left" style="padding:5px;cursor:pointer;" id="email-last-page"></i>
+                                <i class="fas fa-arrow-right" style="padding:5px;cursor:pointer;"></i>
+                                <i class="fas fa-redo" style="padding:5px;cursor:pointer;" id="email-refresh"></i>
+                                <input type="text" placeholder="http://inbox.tbmail.net" class="zoekmachine">
+                                <i class="far fa-star" style="float:right;padding:6px;cursor:pointer;" id="favorites"></i>
+                                <i class="fas fa-ellipsis-v" style="float:right;padding:6px;cursor:pointer;"></i>
+                            </div>
+                            <div class="email-body">
+                                <div class="email-left-nav">
+                                    <div class="email-new-mail">
+                                        Nieuwe Mail
+                                    </div>
+                                    <div class="email-current-inbox">
+                                        <i class="fas fa-inbox" style="margin-left:10px;"></i> Inbox <u>60</u>
+                                    </div>
+                                    <div class="email-inbox">
+                                        <i class="fas fa-star" style="margin-left:10px;"></i> Belangrijk <u>12</u>
+                                    </div>
+                                    <div class="email-inbox">
+                                        <i class="fas fa-clock" style="margin-left:10px;"></i> Snoozed <u>1</u>
+                                    </div>
+                                    <div class="email-inbox">
+                                        <i class="fas fa-paper-plane" style="margin-left:10px;"></i> Verzonden <u>152</u>
+                                    </div>
+                                    <div class="email-contacts">
+                                        <div class="email-contacts-contact">
+                                            <i class="fas fa-user-circle" style="float:left;"></i> Cole Vijver <i class="fas fa-sort-down" style="color:rgba(185, 185, 185, 0.8);"></i>
+                                        </div>
+                                        <div class="email-contacts-contact">
+                                            <i class="fas fa-user-circle" style="float:left;"></i> Jay Visser <i class="fas fa-sort-down" style="color:rgba(185, 185, 185, 0.8);"></i>
+                                        </div>
+                                        <div class="email-contacts-contact">
+                                            <i class="fas fa-user-circle" style="float:left;"></i> Tijn Bakker <i class="fas fa-sort-down" style="color:rgba(185, 185, 185, 0.8);"></i>
+                                        </div>
+                                        <div class="email-contacts-contact">
+                                            <i class="fas fa-user-circle" style="float:left;"></i> Kyle de Winter <i class="fas fa-sort-down" style="color:rgba(185, 185, 185, 0.8);"></i>
+                                        </div>
+                                        <div class="email-contacts-contact">
+                                            <i class="fas fa-user-circle" style="float:left;"></i> Dave de Jong <i class="fas fa-sort-down" style="color:rgba(185, 185, 185, 0.8);"></i>
+                                        </div>
+                                        <div class="email-contacts-contact">
+                                            <i class="fas fa-user-circle" style="float:left;"></i> Gamende Knakkers <i class="fas fa-sort-down" style="color:rgba(185, 185, 185, 0.8);"></i>
+                                        </div>
+                                        <div class="email-contacts-contact">
+                                            <i class="fas fa-user-circle" style="float:left;"></i> Tyrone Jenkins <i class="fas fa-sort-down" style="color:rgba(185, 185, 185, 0.8);"></i>
+                                        </div>
+                                    </div>
+                                    <div class="email-copyright">
+                                        Copyright &copy; TBMail - 2019/2020
+                                    </div>
+                                </div>
+                                <div class="email-primary-inbox">
+                                    <div class="email-primary-header">
+                                        <div class="email-primary-inbox-active">
+                                            <i class="fas fa-inbox" style="float:left;"></i> Prioriteit
+                                        </div>
+                                        <div class="email-primary-inbox-primary">
+                                            <i class="fas fa-user-friends" style="float:left;"></i> Sociaal
+                                        </div>
+                                        <div class="email-primary-inbox-primary">
+                                                <i class="fas fa-tag" style="float:left;"></i> Promoties
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+
+            <div class="os-bar">
+                <div class="os-bar-tasks">
+                    <i class="fab fa-firefox" id="firefox-button" style="cursor:pointer;" ></i>
+                </div>
+                <div class="os-bar-menu">
+                    <i class="fas fa-bars" id="app-menu"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/browse.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</body>
+</html>

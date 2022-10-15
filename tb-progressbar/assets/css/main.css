@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:700&display=swap');
+
+body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    display: none;
+    border-radius: 15px;
+}
+
+#loading-bar {
+    background: rgba(10, 10, 10, 0.452);
+    width: 250px;
+    height: 30px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    box-shadow: 0px 0px 11px -4px rgba(0,0,0,0.75);
+    text-align: center;
+}
+
+#loading-animation {
+    width: 0%;
+    height: 100%;
+    background: #461212b4;
+}
+
+#loading-label {
+    position: relative;
+    bottom: 25px;
+    color: rgb(211, 211, 211);
+    font-size: 15px;
+    font-weight: 600;
+}

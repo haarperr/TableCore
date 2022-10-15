@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="./libs/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link src="./libs/all.min.css" rel="stylesheet" type="text/css">
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <title>TBCore Menu</title>
+</head>
+
+<body>
+    <div class="menus"></div>
+    <div class="templates">
+        <div class="menu">
+            <div class="menu-header"></div>
+            <div class="menu-sub-header">
+                <div class="sub-title"></div>
+                <div class="index-count">
+                    <span class="current-index"></span>
+                    <span>/</span>
+                    <span class="max-index"></span>
+                </div>
+            </div>
+            <div class="menu-container"></div>
+        </div>
+
+        <div class="sub-menu template">
+            <div class="menu-header"></div>
+            <div class="menu-sub-header">
+                <div class="sub-title"></div>
+                <div class="index-count">
+                    <span class="current-index"></span>
+                    <span>/</span>
+                    <span class="max-index"></span>
+                </div>
+            </div>
+            <div class="menu-container"></div>
+        </div>
+
+        <div class="standard template"></div>
+
+        
+        <div class="advanced template">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+        
+        <div class="check template">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+
+        <div class="slider template">
+            <div class="labels">
+                <div class="left">Slider</div>
+                <div class="right"><div class="curr-index">1</div> / <div class="max-index">100</div></div>
+            </div>
+            <input type="range" value="1" min="1" max="5">
+        </div>
+    </div>
+    <script src="./libs/jquery.min.js" type="text/javascript"></script>
+    <script src="./libs/all.min.js" type="text/javascript"></script>
+    <script src="./js/app.js" type="text/javascript"></script>
+</body>
+</html>

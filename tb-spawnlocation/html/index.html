@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TBCore - Spawnlocation</title>
+    <link rel="stylesheet" type="text/css" href="reset.css"> <!-- RESET CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- STYLE CSS -->
+</head>
+    <body>
+        <div class="container" id="noselect">
+            <div class="spawn-locations">
+                <div class="location" id="location" data-location="current" data-label="Laatste Locatie">
+                    <p><span id="current-location">Laatste Locatie</span></p>
+                </div>
+
+                <div class="location" id="location" data-location="legion" data-label="Blokkenpark">
+                    <p><span id="legion">Blokkenpark</span></p>
+                </div>
+
+                <div class="location" id="location" data-location="policedp" data-label="Politie Bureau">
+                    <p><span id="policedp">Politie Bureau</span></p>
+                </div>
+
+                <div class="location" id="location" data-location="motel" data-label="Motel's">
+                    <p><span id="motel">Motel's</span></p>
+                </div>
+
+                <div class="submit-spawn" id="submit-spawn">
+                    <p><span id="spawn-label"></span></p>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-latest.js"></script>
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>

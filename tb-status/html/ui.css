@@ -1,0 +1,75 @@
+body {
+    z-index: -1000;
+}
+
+#heal {
+    position: absolute;
+    left: 1.50%;
+    bottom: 1.8%;
+    width: 7.05%;
+    height: 0.80%;
+    padding: 0;
+    border: 2px solid rgb(68, 68, 68);
+    float:left;
+    background:#707070;
+}
+
+#armor {
+    position: absolute;
+    left: 8.55%;
+    bottom: 1.8%;
+    width: 6.80%;
+    height: 0.80%;
+    padding: 0;
+    border: 2px solid rgb(68, 68, 68);
+    float:left;
+    background:#707070;
+}
+
+#hunger {
+    position: absolute;
+    left: 1.50%;
+    bottom: 0.75%;
+    width: 7.05%;
+    height: 0.80%;
+    padding: 0;
+    border: 2px solid rgb(68, 68, 68);
+    float:left;
+    background:#707070;
+}
+#thirst {
+    position: absolute;
+    left: 8.55%;
+    bottom: 0.75%;
+    width: 6.80%;
+    height: 0.80%;
+    padding: 0;
+    border: 2px solid rgb(68, 68, 68);
+    float:left;
+    background:#707070;
+}
+
+#boxHeal, #boxArmor, #boxHunger, #boxThirst {
+    background: #459f49;
+    width: 100%;
+    height: 100%;
+    transition: 0.2s ease-in-out;
+}
+
+#boxHunger {
+    background: #459f49;
+}
+#boxThirst {
+    background: #5752ce;
+}
+
+#boxArmor {
+    background: #5752ce;
+}
+
+
+body {
+    overflow: hidden;
+    height:1080px;
+    width:100%;
+}

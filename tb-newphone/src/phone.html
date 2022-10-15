@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TB Phone</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="phone">
+        <img src="./assets/img/border/s8.png" class="phone-frame">
+        <div class="phone-screen">
+            <div class="phone-apps">
+                <!-- row 1 -->
+                <div class="app tooltip" id="contacts" style="background-color:rgb(36, 180, 31)">
+                    <span class="tooltiptext tooltip-right">Contacten</span>
+                    <img src="./assets/img/phone-apps/contacts.png">
+                </div>
+                <div class="app tooltip" id="information" style="background-color:rgb(209, 148, 7)">
+                    <span class="tooltiptext tooltip-right">Information</span>
+                    <img src="./assets/img/phone-apps/information.png">
+                </div>
+                <div class="app tooltip" id="bank" style="background-color:rgb(7, 88, 209)">
+                    <span class="tooltiptext tooltip-right">Bank</span>
+                    <img src="./assets/img/phone-apps/bank.png">
+                </div>
+                <div class="app tooltip" id="settings" style="background-color:rgb(73, 73, 73)">
+                    <span class="tooltiptext tooltip-right">Settings</span>
+                    <img src="./assets/img/phone-apps/settings.png">
+                </div>
+                <!-- row 2 -->
+                <div class="app" id="empty">
+                    
+                </div>
+                <div class="app" id="empty">
+                    
+                </div>
+                <div class="app" id="empty">
+                    
+                </div>
+                <div class="app" id="empty">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="app-information">
+
+        </div>
+
+        <div class="app-contacts">
+            <div class="app-contacts-header"><p>Contacten</p></div>
+            <div class="app-contacts-add-contact waves-effect" id="add-contact-page-button"><i class="fas fa-plus"></i></div>
+            <div class="player-contacts" id="player-contacts">
+                <!-- <div class="contact">
+                    <div class="first-letter" style="background-color: rgb(' + contact.color.r + ', ' + contact.color.g + ', ' + contact.color.b + ');">' + (contact.name).charAt(0).toUpperCase() + '</div>
+                    <span id="name"><td>Snorlex</td></span>
+                    <div id="phone-call-action"><i class="material-icons" id="contact-call">call</i></div>
+                    <i class="material-icons" id="contact-sms">textsms</i>
+                    <i class="material-icons" id="contact-edit">edit</i>
+                    <span id="number">(' + contact.number + ')</span>
+                </div> -->
+            </div>
+
+            <div class="add-contact-page">
+                <div class="row" id="contact-add-inputs">
+                    <form class="col s10">
+                        <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix" id="contact-add-icon">account_circle</i>
+                            <input class="add-contact-name" id="icon_prefix" placeholder="Contact naam" type="text" class="validate">
+                        </div>
+                        <div class="input-field col s12" id="telnr-input">
+                            <i class="material-icons prefix" id="contact-add-icon">phone</i>
+                            <input class="add-contact-nr" id="icon_telephone" placeholder="Tel nr." type="tel" class="validate">
+                        </div>
+                        </div>
+                    </form>
+                </div> 
+                <button class="btn waves-effect waves-light blue darken-2" id="contact-save" type="submit" name="action">Opslaan
+                    <i class="material-icons right">send</i>
+                </button> 
+                <button class="btn waves-effect waves-light blue darken-2" id="contact-cancel" type="submit" name="action">Annuleren
+                    <i class="material-icons right">send</i>
+                </button>        
+            </div>
+        </div>
+
+        <div class="app-bank">
+
+            <div class="app-bank-header">
+                <div class="header-item selected" id="header-accounts">
+                    <i class="material-icons">credit_card</i>
+                    <p>Rekeningen</p>
+                </div>
+                <div class="header-item" id="header-settings">
+                    
+                </div>
+                <div class="header-item" id="header-accounts">
+
+                </div>
+                <div class="header-item" id="header-settings">
+                    
+                </div>
+            </div>
+
+            <div class="app-bank-accounts">
+                <!-- <div class="account">
+                    <span id="bank-name">HS SNOR</span><br>
+                    <span id="bank-type">Betaalrekening</span><br>
+                    <span id="bank-banknumber">NLYEET0101429420</span><br>
+                    <i class="fas fa-piggy-bank" id="account-icon"></i>
+                    <span id="bank-balance">€ 15.00</span><br>
+                </div>
+                <div class="account">
+                    <span id="bank-name">KIND KIRL</span><br>
+                    <span id="bank-type">Betaalrekening</span><br>
+                    <span id="bank-banknumber">NLYEET0101429420</span><br>
+                    <i class="fas fa-piggy-bank" id="account-icon"></i>
+                    <span id="bank-balance">€ 50.00</span><br>
+                </div>
+                <div class="app-bank-total-balance"><p>Totaalsaldo</p><i class="material-icons">info</i><span id="total-accounts-balance">€ 75.00</span></div>  -->
+            </div>
+
+            <div class="app-bank-footer">
+                <div class="bank-transfer">
+                    <p>Overboeken</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="app-bank-transfer">
+                
+        </div>
+
+        <div class="phone-header">
+            <div class="phone-header-content">
+                <div class="provider"><i class="fas fa-signal"></i> TB Cellular 5G</div>
+                <div class="current-time"><i class=""></i><span id="current-time"></span></div>
+                <div class="battery"><i class="fas fa-battery-three-quarters"></i></div>
+            </div>
+        </div>
+
+        <div class="phone-buttons">
+            <i class="material-icons" id="phone-back">keyboard_arrow_left</i>
+            <i class="far fa-circle" id="phone-home"></i>
+            <i class="far fa-square" id="phone-close"></i>
+        </div>
+
+        <div class="phone-footer"></div>
+
+        <div class="phone-notification">
+            <div class="phone-notification-header">
+                <i class="material-icons">info</i><span id="phone-notification-titel"></span>
+            </div>
+
+            <div class="phone-notification-content">
+                <span id="phone-notification-content"></span>
+            </div>
+
+            <div class="phone-notification-close">
+                <i class="material-icons" id="phone-notification-close">close</i>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.laptop-ui {
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    color: #fff;
+}
+
+.taskbar {
+    background-color: rgba(30, 29, 36, 0.9);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    font-size: 18px;
+    z-index: 18;
+}
+
+.taskbar-blue {
+    color: rgb(94, 148, 248);
+}
+
+.taskbar-green {
+    color: rgb(92, 196, 23);
+}
+
+.taskbar-purple {
+    color: rgb(114,137,218);
+}
+
+.taskbar-left {
+    float: left;
+}
+
+.taskbar-icon {
+    transition-property: color, background-color;
+    transition-duration: .2s;
+    transition-timing-function: ease;
+    padding: 15px;
+}
+
+.taskbar-icon:hover {
+    background-color: rgba(71, 71, 71, 0.479);
+    color: rgb(94, 148, 248);
+}
+
+.taskbar-inuse {
+    border-bottom: 2px solid rgb(113, 163, 255);
+}
+
+.windows-start {
+    width: 500px;
+    height: 500px;
+    background-color: rgba(38, 37, 39, 0.952);
+    position: absolute;
+    bottom: 50px;
+    z-index: 22;
+    overflow: hidden;
+}
+
+.windows-start-left {
+    height: 100%;
+    float: left;
+}
+
+.windows-start-icon {
+    padding: 15px;
+    font-size: 18px;
+    color: #fff;
+    transition: background-color ease .2s;
+    font-weight: lighter;
+}
+
+.windows-start-icon:hover {
+    background-color: rgba(71, 71, 71, 0.479);
+}
+
+.windows-start-bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.windows-start-list {
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 250px;
+    float: left;
+    overflow: scroll;
+    height: 100%;
+}
+
+.windows-start-list p {
+    font-size: 12px;
+    padding: 10px;
+    width: 100%;
+    transition: background-color ease .2s;
+}
+
+.windows-start-list p:hover {
+    background-color: rgba(71, 71, 71, 0.479);
+}
+
+.blue-bg {
+    background-color: rgb(94, 148, 248);
+    padding: 5px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
